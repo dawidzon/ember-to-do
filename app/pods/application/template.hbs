@@ -7,15 +7,20 @@
       type='text'
       class='form-control'
       id='inputPassword2'
+      value={{this.newTaskValue}}
       placeholder='Add new task'
       {{on 'input' this.onInputValue}}
     />
   </div>
   <div class='col-auto'>
-    <button type='submit' class='btn btn-primary mb-3'>Confirm identity</button>
+    <button
+      type='submit'
+      class='btn btn-primary mb-3'
+      disabled={{this.hasEmptyValue}}
+    >Add</button>
   </div>
 </form>
 
-<List @items={{this.items}} />
+<List @items={{this.model}} />
 
 {{outlet}}
