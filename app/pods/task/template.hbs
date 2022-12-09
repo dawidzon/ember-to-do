@@ -1,0 +1,6 @@
+<h1>Tu jest nasz task:</h1>
+<div>Id: {{this.model.id}}</div>
+<div>Treść: {{this.model.description}}</div>
+<div>Zrobiony?: {{if this.model.isDone 'A jak' 'Nope'}}</div>
+<div>Zaktualizowany: {{this.model.prettyUpdatedAt}}</div>
+<div>Stworzony: {{this.model.prettycreatedAt}}</div>
